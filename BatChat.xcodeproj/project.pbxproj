@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		320CCD94D3E0037F4924736D /* Pods_BatChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B11FC7B848F390EE1A9AC4 /* Pods_BatChatTests.framework */; };
+		5DB416ECE748F8B9286A58D1 /* Pods_BatChat_BatChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E445FBFB9F6B917EBC297335 /* Pods_BatChat_BatChatUITests.framework */; };
+		A908E868C4637E6674D9C6EB /* Pods_BatChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BC6EE52144F78A4F835F23 /* Pods_BatChat.framework */; };
+		D827FFB5272C6B7100877153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFB4272C6B7100877153 /* AppDelegate.swift */; };
+		D827FFB7272C6B7100877153 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFB6272C6B7100877153 /* SceneDelegate.swift */; };
+		D827FFB9272C6B7100877153 /* ConversationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFB8272C6B7100877153 /* ConversationVC.swift */; };
+		D827FFBC272C6B7100877153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D827FFBA272C6B7100877153 /* Main.storyboard */; };
+		D827FFBE272C6B7100877153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D827FFBD272C6B7100877153 /* Assets.xcassets */; };
+		D827FFC1272C6B7100877153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D827FFBF272C6B7100877153 /* LaunchScreen.storyboard */; };
+		D827FFCC272C6B7100877153 /* BatChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFCB272C6B7100877153 /* BatChatTests.swift */; };
+		D827FFD6272C6B7100877153 /* BatChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFD5272C6B7100877153 /* BatChatUITests.swift */; };
+		D827FFD8272C6B7100877153 /* BatChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827FFD7272C6B7100877153 /* BatChatUITestsLaunchTests.swift */; };
+		D8555D3D272DA82100B8D5F4 /* DatabaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8555D3C272DA82100B8D5F4 /* DatabaseManger.swift */; };
+		D871F253272D368B0048BE66 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F252272D368B0048BE66 /* LoginVC.swift */; };
+		D871F255272D36A00048BE66 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F254272D36A00048BE66 /* RegisterVC.swift */; };
+		D871F257272D36CA0048BE66 /* PhotoViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F256272D36CA0048BE66 /* PhotoViewerVC.swift */; };
+		D871F259272D36D50048BE66 /* VideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F258272D36D50048BE66 /* VideoPlayerVC.swift */; };
+		D871F25B272D36F90048BE66 /* NewConversationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F25A272D36F90048BE66 /* NewConversationVC.swift */; };
+		D871F25D272D370C0048BE66 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F25C272D370C0048BE66 /* ProfileVC.swift */; };
+		D871F260272D3E840048BE66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F25F272D3E840048BE66 /* Extensions.swift */; };
+		D871F262272D6B420048BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D871F261272D6B420048BE66 /* GoogleService-Info.plist */; };
+		D8A37E072730446E0007B667 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37E062730446E0007B667 /* ChatVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D827FFC8272C6B7100877153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D827FFA9272C6B7100877153 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D827FFB0272C6B7100877153;
+			remoteInfo = BatChat;
+		};
+		D827FFD2272C6B7100877153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D827FFA9272C6B7100877153 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D827FFB0272C6B7100877153;
+			remoteInfo = BatChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00BC6EE52144F78A4F835F23 /* Pods_BatChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BatChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B11FC7B848F390EE1A9AC4 /* Pods_BatChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BatChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A15A9D1660B8FFBC37561F /* Pods-BatChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChat.release.xcconfig"; path = "Target Support Files/Pods-BatChat/Pods-BatChat.release.xcconfig"; sourceTree = "<group>"; };
+		60EAC32B891A13C9D435B7A0 /* Pods-BatChat-BatChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChat-BatChatUITests.release.xcconfig"; path = "Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8DE75445A76F988079327500 /* Pods-BatChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChat.debug.xcconfig"; path = "Target Support Files/Pods-BatChat/Pods-BatChat.debug.xcconfig"; sourceTree = "<group>"; };
+		96CCE604BCA3F88F13D25ADA /* Pods-BatChat-BatChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChat-BatChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC953F7080C3A7448B526AC /* Pods-BatChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChatTests.release.xcconfig"; path = "Target Support Files/Pods-BatChatTests/Pods-BatChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		D827FFB1272C6B7100877153 /* BatChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D827FFB4272C6B7100877153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D827FFB6272C6B7100877153 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D827FFB8272C6B7100877153 /* ConversationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationVC.swift; sourceTree = "<group>"; };
+		D827FFBB272C6B7100877153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D827FFBD272C6B7100877153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D827FFC0272C6B7100877153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D827FFC2272C6B7100877153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D827FFC7272C6B7100877153 /* BatChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D827FFCB272C6B7100877153 /* BatChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatChatTests.swift; sourceTree = "<group>"; };
+		D827FFD1272C6B7100877153 /* BatChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D827FFD5272C6B7100877153 /* BatChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatChatUITests.swift; sourceTree = "<group>"; };
+		D827FFD7272C6B7100877153 /* BatChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8555D3C272DA82100B8D5F4 /* DatabaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManger.swift; sourceTree = "<group>"; };
+		D871F252272D368B0048BE66 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D871F254272D36A00048BE66 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		D871F256272D36CA0048BE66 /* PhotoViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerVC.swift; sourceTree = "<group>"; };
+		D871F258272D36D50048BE66 /* VideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerVC.swift; sourceTree = "<group>"; };
+		D871F25A272D36F90048BE66 /* NewConversationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationVC.swift; sourceTree = "<group>"; };
+		D871F25C272D370C0048BE66 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		D871F25F272D3E840048BE66 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D871F261272D6B420048BE66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8A37E062730446E0007B667 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		E445FBFB9F6B917EBC297335 /* Pods_BatChat_BatChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BatChat_BatChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FCFD245E3B14D638F81E49 /* Pods-BatChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChatTests.debug.xcconfig"; path = "Target Support Files/Pods-BatChatTests/Pods-BatChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D827FFAE272C6B7100877153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A908E868C4637E6674D9C6EB /* Pods_BatChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFC4272C6B7100877153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320CCD94D3E0037F4924736D /* Pods_BatChatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFCE272C6B7100877153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB416ECE748F8B9286A58D1 /* Pods_BatChat_BatChatUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48B37728A0991A6656AA0A7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00BC6EE52144F78A4F835F23 /* Pods_BatChat.framework */,
+				E445FBFB9F6B917EBC297335 /* Pods_BatChat_BatChatUITests.framework */,
+				15B11FC7B848F390EE1A9AC4 /* Pods_BatChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDD6931E8400FA3F20AAB53F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DE75445A76F988079327500 /* Pods-BatChat.debug.xcconfig */,
+				24A15A9D1660B8FFBC37561F /* Pods-BatChat.release.xcconfig */,
+				96CCE604BCA3F88F13D25ADA /* Pods-BatChat-BatChatUITests.debug.xcconfig */,
+				60EAC32B891A13C9D435B7A0 /* Pods-BatChat-BatChatUITests.release.xcconfig */,
+				F5FCFD245E3B14D638F81E49 /* Pods-BatChatTests.debug.xcconfig */,
+				BAC953F7080C3A7448B526AC /* Pods-BatChatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D827FFA8272C6B7100877153 = {
+			isa = PBXGroup;
+			children = (
+				D827FFB3272C6B7100877153 /* BatChat */,
+				D827FFCA272C6B7100877153 /* BatChatTests */,
+				D827FFD4272C6B7100877153 /* BatChatUITests */,
+				D827FFB2272C6B7100877153 /* Products */,
+				CDD6931E8400FA3F20AAB53F /* Pods */,
+				48B37728A0991A6656AA0A7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D827FFB2272C6B7100877153 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D827FFB1272C6B7100877153 /* BatChat.app */,
+				D827FFC7272C6B7100877153 /* BatChatTests.xctest */,
+				D827FFD1272C6B7100877153 /* BatChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D827FFB3272C6B7100877153 /* BatChat */ = {
+			isa = PBXGroup;
+			children = (
+				D871F261272D6B420048BE66 /* GoogleService-Info.plist */,
+				D871F250272D354E0048BE66 /* Resources */,
+				D871F24F272D35490048BE66 /* ViewModels */,
+				D871F24E272D35410048BE66 /* Models */,
+				D871F24D272D35350048BE66 /* Views */,
+				D871F24C272D35280048BE66 /* Controllers */,
+				D827FFC2272C6B7100877153 /* Info.plist */,
+			);
+			path = BatChat;
+			sourceTree = "<group>";
+		};
+		D827FFCA272C6B7100877153 /* BatChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				D827FFCB272C6B7100877153 /* BatChatTests.swift */,
+			);
+			path = BatChatTests;
+			sourceTree = "<group>";
+		};
+		D827FFD4272C6B7100877153 /* BatChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D827FFD5272C6B7100877153 /* BatChatUITests.swift */,
+				D827FFD7272C6B7100877153 /* BatChatUITestsLaunchTests.swift */,
+			);
+			path = BatChatUITests;
+			sourceTree = "<group>";
+		};
+		D871F24C272D35280048BE66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D871F25E272D377C0048BE66 /* Login */,
+				D827FFB8272C6B7100877153 /* ConversationVC.swift */,
+				D871F256272D36CA0048BE66 /* PhotoViewerVC.swift */,
+				D871F258272D36D50048BE66 /* VideoPlayerVC.swift */,
+				D871F25A272D36F90048BE66 /* NewConversationVC.swift */,
+				D871F25C272D370C0048BE66 /* ProfileVC.swift */,
+				D8A37E062730446E0007B667 /* ChatVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D871F24D272D35350048BE66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D871F251272D35930048BE66 /* Storyboards */,
+				D827FFBD272C6B7100877153 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D871F24E272D35410048BE66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D871F24F272D35490048BE66 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D871F250272D354E0048BE66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D827FFB4272C6B7100877153 /* AppDelegate.swift */,
+				D827FFB6272C6B7100877153 /* SceneDelegate.swift */,
+				D871F25F272D3E840048BE66 /* Extensions.swift */,
+				D8555D3C272DA82100B8D5F4 /* DatabaseManger.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D871F251272D35930048BE66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D827FFBA272C6B7100877153 /* Main.storyboard */,
+				D827FFBF272C6B7100877153 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D871F25E272D377C0048BE66 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D871F252272D368B0048BE66 /* LoginVC.swift */,
+				D871F254272D36A00048BE66 /* RegisterVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D827FFB0272C6B7100877153 /* BatChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D827FFDB272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChat" */;
+			buildPhases = (
+				AD317A64C5E7964117D9ADDC /* [CP] Check Pods Manifest.lock */,
+				D827FFAD272C6B7100877153 /* Sources */,
+				D827FFAE272C6B7100877153 /* Frameworks */,
+				D827FFAF272C6B7100877153 /* Resources */,
+				437A3BA5D6531927DE8CD1CB /* [CP] Embed Pods Frameworks */,
+				A903B6A85924A87B3D0721E3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BatChat;
+			productName = BatChat;
+			productReference = D827FFB1272C6B7100877153 /* BatChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D827FFC6272C6B7100877153 /* BatChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D827FFDE272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChatTests" */;
+			buildPhases = (
+				976D714312DDC7C4A58D2D1D /* [CP] Check Pods Manifest.lock */,
+				D827FFC3272C6B7100877153 /* Sources */,
+				D827FFC4272C6B7100877153 /* Frameworks */,
+				D827FFC5272C6B7100877153 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D827FFC9272C6B7100877153 /* PBXTargetDependency */,
+			);
+			name = BatChatTests;
+			productName = BatChatTests;
+			productReference = D827FFC7272C6B7100877153 /* BatChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D827FFD0272C6B7100877153 /* BatChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D827FFE1272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChatUITests" */;
+			buildPhases = (
+				1BBF3C95269781201D93155F /* [CP] Check Pods Manifest.lock */,
+				D827FFCD272C6B7100877153 /* Sources */,
+				D827FFCE272C6B7100877153 /* Frameworks */,
+				D827FFCF272C6B7100877153 /* Resources */,
+				2A48825383EAE88E44B18DE8 /* [CP] Embed Pods Frameworks */,
+				17BADD6DDDF7B248D487BADF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D827FFD3272C6B7100877153 /* PBXTargetDependency */,
+			);
+			name = BatChatUITests;
+			productName = BatChatUITests;
+			productReference = D827FFD1272C6B7100877153 /* BatChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D827FFA9272C6B7100877153 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D827FFB0272C6B7100877153 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D827FFC6272C6B7100877153 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D827FFB0272C6B7100877153;
+					};
+					D827FFD0272C6B7100877153 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D827FFB0272C6B7100877153;
+					};
+				};
+			};
+			buildConfigurationList = D827FFAC272C6B7100877153 /* Build configuration list for PBXProject "BatChat" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D827FFA8272C6B7100877153;
+			productRefGroup = D827FFB2272C6B7100877153 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D827FFB0272C6B7100877153 /* BatChat */,
+				D827FFC6272C6B7100877153 /* BatChatTests */,
+				D827FFD0272C6B7100877153 /* BatChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D827FFAF272C6B7100877153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D827FFC1272C6B7100877153 /* LaunchScreen.storyboard in Resources */,
+				D871F262272D6B420048BE66 /* GoogleService-Info.plist in Resources */,
+				D827FFBE272C6B7100877153 /* Assets.xcassets in Resources */,
+				D827FFBC272C6B7100877153 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFC5272C6B7100877153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFCF272C6B7100877153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17BADD6DDDF7B248D487BADF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BBF3C95269781201D93155F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BatChat-BatChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A48825383EAE88E44B18DE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatChat-BatChatUITests/Pods-BatChat-BatChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		437A3BA5D6531927DE8CD1CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		976D714312DDC7C4A58D2D1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BatChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A903B6A85924A87B3D0721E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatChat/Pods-BatChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD317A64C5E7964117D9ADDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BatChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D827FFAD272C6B7100877153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A37E072730446E0007B667 /* ChatVC.swift in Sources */,
+				D871F25B272D36F90048BE66 /* NewConversationVC.swift in Sources */,
+				D871F259272D36D50048BE66 /* VideoPlayerVC.swift in Sources */,
+				D827FFB9272C6B7100877153 /* ConversationVC.swift in Sources */,
+				D871F25D272D370C0048BE66 /* ProfileVC.swift in Sources */,
+				D827FFB5272C6B7100877153 /* AppDelegate.swift in Sources */,
+				D871F260272D3E840048BE66 /* Extensions.swift in Sources */,
+				D8555D3D272DA82100B8D5F4 /* DatabaseManger.swift in Sources */,
+				D871F253272D368B0048BE66 /* LoginVC.swift in Sources */,
+				D871F257272D36CA0048BE66 /* PhotoViewerVC.swift in Sources */,
+				D827FFB7272C6B7100877153 /* SceneDelegate.swift in Sources */,
+				D871F255272D36A00048BE66 /* RegisterVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFC3272C6B7100877153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D827FFCC272C6B7100877153 /* BatChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D827FFCD272C6B7100877153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D827FFD8272C6B7100877153 /* BatChatUITestsLaunchTests.swift in Sources */,
+				D827FFD6272C6B7100877153 /* BatChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D827FFC9272C6B7100877153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D827FFB0272C6B7100877153 /* BatChat */;
+			targetProxy = D827FFC8272C6B7100877153 /* PBXContainerItemProxy */;
+		};
+		D827FFD3272C6B7100877153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D827FFB0272C6B7100877153 /* BatChat */;
+			targetProxy = D827FFD2272C6B7100877153 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D827FFBA272C6B7100877153 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D827FFBB272C6B7100877153 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D827FFBF272C6B7100877153 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D827FFC0272C6B7100877153 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D827FFD9272C6B7100877153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D827FFDA272C6B7100877153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D827FFDC272C6B7100877153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE75445A76F988079327500 /* Pods-BatChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BatChat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "BatMan need it!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BatMan need it!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D827FFDD272C6B7100877153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24A15A9D1660B8FFBC37561F /* Pods-BatChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BatChat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "BatMan need it!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BatMan need it!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D827FFDF272C6B7100877153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FCFD245E3B14D638F81E49 /* Pods-BatChatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatChat.app/BatChat";
+			};
+			name = Debug;
+		};
+		D827FFE0272C6B7100877153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC953F7080C3A7448B526AC /* Pods-BatChatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatChat.app/BatChat";
+			};
+			name = Release;
+		};
+		D827FFE2272C6B7100877153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CCE604BCA3F88F13D25ADA /* Pods-BatChat-BatChatUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BatChat;
+			};
+			name = Debug;
+		};
+		D827FFE3272C6B7100877153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60EAC32B891A13C9D435B7A0 /* Pods-BatChat-BatChatUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.haoboxuxu.BatChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BatChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D827FFAC272C6B7100877153 /* Build configuration list for PBXProject "BatChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D827FFD9272C6B7100877153 /* Debug */,
+				D827FFDA272C6B7100877153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D827FFDB272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D827FFDC272C6B7100877153 /* Debug */,
+				D827FFDD272C6B7100877153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D827FFDE272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D827FFDF272C6B7100877153 /* Debug */,
+				D827FFE0272C6B7100877153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D827FFE1272C6B7100877153 /* Build configuration list for PBXNativeTarget "BatChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D827FFE2272C6B7100877153 /* Debug */,
+				D827FFE3272C6B7100877153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D827FFA9272C6B7100877153 /* Project object */;
+}
