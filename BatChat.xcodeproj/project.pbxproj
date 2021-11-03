@@ -29,6 +29,7 @@
 		D871F260272D3E840048BE66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D871F25F272D3E840048BE66 /* Extensions.swift */; };
 		D871F262272D6B420048BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D871F261272D6B420048BE66 /* GoogleService-Info.plist */; };
 		D8A37E072730446E0007B667 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37E062730446E0007B667 /* ChatVC.swift */; };
+		D8A37E09273106510007B667 /* StorageManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37E08273106510007B667 /* StorageManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D871F25F272D3E840048BE66 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D871F261272D6B420048BE66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8A37E062730446E0007B667 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		D8A37E08273106510007B667 /* StorageManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManger.swift; sourceTree = "<group>"; };
 		E445FBFB9F6B917EBC297335 /* Pods_BatChat_BatChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BatChat_BatChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FCFD245E3B14D638F81E49 /* Pods-BatChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatChatTests.debug.xcconfig"; path = "Target Support Files/Pods-BatChatTests/Pods-BatChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				D827FFB6272C6B7100877153 /* SceneDelegate.swift */,
 				D871F25F272D3E840048BE66 /* Extensions.swift */,
 				D8555D3C272DA82100B8D5F4 /* DatabaseManger.swift */,
+				D8A37E08273106510007B667 /* StorageManger.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				D871F25B272D36F90048BE66 /* NewConversationVC.swift in Sources */,
 				D871F259272D36D50048BE66 /* VideoPlayerVC.swift in Sources */,
 				D827FFB9272C6B7100877153 /* ConversationVC.swift in Sources */,
+				D8A37E09273106510007B667 /* StorageManger.swift in Sources */,
 				D871F25D272D370C0048BE66 /* ProfileVC.swift in Sources */,
 				D827FFB5272C6B7100877153 /* AppDelegate.swift in Sources */,
 				D871F260272D3E840048BE66 /* Extensions.swift in Sources */,

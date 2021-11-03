@@ -64,9 +64,35 @@ extension AppDelegate: GIDSignInDelegate {
             print("Did signin with google \(user)")
             return
         }
+        
+        UserDefaults.standard.set(email, forKey: "email")
+        
         DatabaseManger.shared.userExists(with: email) { exists in
             if !exists {
-                DatabaseManger.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                let chatAppUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                DatabaseManger.shared.insertUser(with: chatAppUser) { success in
+                    if success {
+                        if user.profile.hasImage {
+                            guard let url = user.profile.imageURL(withDimension: 200) else {
+                                return
+                            }
+                            URLSession.shared.dataTask(with: url) { data, _, _ in
+                                guard let data = data else {
+                                    return
+                                }
+                                StorageManger.shared.uploadProfilePicture(with: data, fileName: chatAppUser.profilePictureFileName) { results in
+                                    switch results {
+                                    case .success(let downloadURL):
+                                        print("downloadURL = \(downloadURL)")
+                                        UserDefaults.standard.set(downloadURL, forKey: "profile_picture_url")
+                                    case .failure(let error):
+                                        print("error = \(error)")
+                                    }
+                                }
+                            }.resume()
+                        }
+                    }
+                }
             }
         }
         

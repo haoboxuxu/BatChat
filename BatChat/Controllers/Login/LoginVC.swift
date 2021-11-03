@@ -175,7 +175,11 @@ class LoginVC: UIViewController {
             guard let result = authDataResult, error == nil else {
                 return
             }
+            
             let user = result.user
+            
+            UserDefaults.standard.set(email, forKey: "email")
+            
             print("logedin a user = \(user)")
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         }
@@ -218,7 +222,7 @@ extension LoginVC: LoginButtonDelegate {
         }
         
         let fbGraphRequest = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                        parameters: ["fields": "email, name"],
+                                                        parameters: ["fields": "first_name, last_name, email, picture.type(large)"],
                                                         tokenString: token,
                                                         version: nil,
                                                         httpMethod: .get)
@@ -229,20 +233,51 @@ extension LoginVC: LoginButtonDelegate {
                 return
             }
             
-            guard let userName = result["name"] as? String,
-                    let email = result["email"] as? String else {
+            print("fb result = \(result)")
+            
+            guard let firstName = result["first_name"] as? String,
+                  let lastName = result["last_name"] as? String,
+                  let email = result["email"] as? String,
+                  let picture = result["picture"] as? [String: Any],
+                  let data = picture["data"] as? [String: Any],
+                  let pictureURL = data["url"] as? String else {
                 print("filed to get name & email from FBGraphRequest result.")
                 return
             }
             
-            let nameComponents = userName.components(separatedBy: " ")
-            guard nameComponents.count >= 2 else { return }
-            let firstName = nameComponents[0]
-            let lastName = nameComponents[1]
+            UserDefaults.standard.set(email, forKey: "email")
             
             DatabaseManger.shared.userExists(with: email) { exists in
                 if !exists {
-                    DatabaseManger.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                    let chatAppUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                    DatabaseManger.shared.insertUser(with: chatAppUser) { success in
+                        if success {
+                            
+                            guard let url = URL(string: pictureURL) else {
+                                return
+                            }
+                            
+                            print("downloading data from facebook profile png")
+                            URLSession.shared.dataTask(with: url) { data, _, _ in
+                                
+                                guard let data = data else {
+                                    print("filed to get data from fb profile png")
+                                    return
+                                }
+                                print("got data from facebook profile png, uploading to firebase")
+                                StorageManger.shared.uploadProfilePicture(with: data, fileName: chatAppUser.profilePictureFileName) { results in
+                                    switch results {
+                                    case .success(let downloadURL):
+                                        print("downloadURL = \(downloadURL)")
+                                        UserDefaults.standard.set(downloadURL, forKey: "profile_picture_url")
+                                    case .failure(let error):
+                                        print("error = \(error)")
+                                    }
+                                }
+                            }.resume()
+                            
+                        }
+                    }
                 }
             }
             

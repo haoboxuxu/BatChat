@@ -203,10 +203,24 @@ class RegisterVC: UIViewController {
                 guard authDataResult != nil, error == nil else {
                     return
                 }
-                
-                DatabaseManger.shared.insertUser(with: ChatAppUser(firstName: firName,
-                                                                   lastName: lastName,
-                                                                   emailAddress: email))
+                let chatAppUser = ChatAppUser(firstName: firName, lastName: lastName, emailAddress: email)
+                DatabaseManger.shared.insertUser(with: chatAppUser) { success in
+                    if success {
+                        guard let image = strongSelf.imageView.image, let data = image.pngData() else {
+                            return
+                        }
+                        
+                        StorageManger.shared.uploadProfilePicture(with: data, fileName: chatAppUser.profilePictureFileName) { results in
+                            switch results {
+                            case .success(let downloadURL):
+                                print("downloadURL = \(downloadURL)")
+                                UserDefaults.standard.set(downloadURL, forKey: "profile_picture_url")
+                            case .failure(let error):
+                                print("error = \(error)")
+                            }
+                        }
+                    }
+                }
                 
                 strongSelf.navigationController?.dismiss(animated: true, completion: nil)
             }
