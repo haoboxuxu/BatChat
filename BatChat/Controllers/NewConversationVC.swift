@@ -10,6 +10,8 @@ import JGProgressHUD
 
 class NewConversationVC: UIViewController {
     
+    public var completion: (([String: String]) -> (Void))?
+    
     private let spinner = JGProgressHUD(style: .dark)
     
     private var users: [[String: String]] = []
@@ -78,6 +80,10 @@ extension NewConversationVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let targetUserResult = results[indexPath.row]
+        dismiss(animated: true) { [weak self] in
+            self?.completion?(targetUserResult)
+        }
     }
 }
 

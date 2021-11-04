@@ -41,8 +41,22 @@ class ConversationVC: UIViewController {
     
     @objc func tapComposeBtn() {
         let newConversationVC = NewConversationVC()
+        newConversationVC.completion = { [weak self] result in
+            self?.createNewConversation(result: result)
+        }
         let navC = UINavigationController(rootViewController: newConversationVC)
         present(navC, animated: true)
+    }
+    
+    private func createNewConversation(result: [String: String]) {
+        guard let name = result["name"], let email = result["email"] else {
+            return
+        }
+        let chatVC = ChatVC(with: email)
+        chatVC.isNewConversation = true
+        chatVC.title = name
+        chatVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(chatVC, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -88,7 +102,7 @@ extension ConversationVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let chatVC = ChatVC()
+        let chatVC = ChatVC(with: "xxx@xxx.xxx")
         chatVC.title = "HB's girlfriend"
         chatVC.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(chatVC, animated: true)

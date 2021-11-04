@@ -6,6 +6,7 @@
 //
 
 import FirebaseDatabase
+import RealmSwift
 
 final class DatabaseManger {
     
@@ -48,7 +49,6 @@ extension DatabaseManger {
         ]
      ]
      */
-    
     public func insertUser(with user: ChatAppUser, completion: @escaping (Bool) -> Void) {
         database.child(user.safeEmial).setValue([
             "first_name": user.firstName,
@@ -107,6 +107,189 @@ extension DatabaseManger {
     
     public enum DatabaseError: Error {
         case failedToFetch
+    }
+}
+
+//send message / conversations
+extension DatabaseManger {
+    
+    /*
+     conversations => [
+        [
+            "id": "abcdefg"
+            "other_user_email":
+            "latest_message" => [
+                "date": Date()
+                "latest_message": "message"
+                "is_read": true/false
+            ]
+        ]
+     ]
+     */
+    public func createNewConversation(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else { return }
+        let safeEmail = DatabaseManger.safeEmail(emailAddress: currentEmail)
+        let ref = database.child("\(safeEmail)")
+        ref.observeSingleEvent(of: .value) { snapshot in
+            guard var userNode = snapshot.value as? [String: Any] else {
+                completion(false)
+                print("user not found")
+                return
+            }
+            
+            let messageDate = firstMessage.sentDate
+            let dateString = ChatVC.dateFormatter.string(from: messageDate)
+            
+            var message = ""
+            switch firstMessage.kind {
+            case .text(let messageText):
+                message = messageText
+                break
+            case .attributedText(_):
+                break
+            case .photo(_):
+                break
+            case .video(_):
+                break
+            case .location(_):
+                break
+            case .emoji(_):
+                break
+            case .audio(_):
+                break
+            case .contact(_):
+                break
+            case .linkPreview(_):
+                break
+            case .custom(_):
+                break
+            }
+            
+            let conversationId = "conversation_\(firstMessage.messageId)"
+            
+            let newConversationData: [String: Any] = [
+                "id": conversationId,
+                "other_user_email": otherUserEmail,
+                "latest_message": [
+                    "date": dateString,
+                    "latest_message": message,
+                    "is_read": false
+                ]
+            ]
+            
+            if var conversations = userNode["conversations"] as? [[String: Any]] {
+                // conversations exists, appednt
+                conversations.append(newConversationData)
+                userNode["conversations"] = conversations
+                
+                ref.setValue(userNode) { [weak self] error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    self?.finishCreatingConversations(conversationId, firstMessage, completion: completion)
+                }
+            } else {
+                // create conversations
+                userNode["conversations"] = [
+                    newConversationData
+                ]
+                
+                ref.setValue(userNode) { [weak self] error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    self?.finishCreatingConversations(conversationId, firstMessage, completion: completion)
+                }
+            }
+        }
+    }
+    
+    /*
+     "abcdefg" => [
+        "message": [
+            {
+                "id": String,
+                "type": .video .text. photo,
+                "content": String,
+                "date": Date(),
+                "sender_email": String,
+                "is_read": true/false
+            }
+        ]
+     ]
+     */
+    private func finishCreatingConversations(_ conversationId: String, _ firstMessage: Message, completion: @escaping (Bool) -> Void) {
+        let messageDate = firstMessage.sentDate
+        let dateString = ChatVC.dateFormatter.string(from: messageDate)
+        
+        var message = ""
+        switch firstMessage.kind {
+        case .text(let messageText):
+            message = messageText
+            break
+        case .attributedText(_):
+            break
+        case .photo(_):
+            break
+        case .video(_):
+            break
+        case .location(_):
+            break
+        case .emoji(_):
+            break
+        case .audio(_):
+            break
+        case .contact(_):
+            break
+        case .linkPreview(_):
+            break
+        case .custom(_):
+            break
+        }
+        
+        guard let myEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            completion(false)
+            return
+        }
+        
+        let currentEmail = DatabaseManger.safeEmail(emailAddress: myEmail)
+        
+        let collectionMessage: [String: Any] = [
+            "id": firstMessage.messageId,
+            "type": firstMessage.kind.messageKindString,
+            "content": message,
+            "date": dateString,
+            "sender_email": currentEmail,
+            "is_read": false
+        ]
+        
+        let value: [String: Any] = [
+            "message": [
+                collectionMessage
+            ]
+        ]
+        
+        database.child("\(conversationId)").setValue(value) { error, _ in
+            guard error == nil else {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+    }
+    
+    public func getAllConversations(for email: String, completion: @escaping (Result<String, Error>) -> Void) {
+        
+    }
+    
+    public func getAllMessageForConversation(for id: String, completion: @escaping (Result<String, Error>) -> Void) {
+        
+    }
+    
+    public func sendMessage(to conversation: String, message: Message, completion: @escaping (Bool) -> Void) {
+         
     }
 }
 
